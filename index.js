@@ -18,6 +18,28 @@ bot.on('ready',function(){
 });
 //GETS THE BOT ONLINE
 
+//WELCOME/LEAVE MESSAGE
+bot.on('guildMemberAdd', (member) => {
+    const welcomechannel = member.guild.channels.find('name', `entrance`);
+    welcomechannel.send({embed: new Discord.RichEmbed()
+        .setColor("#FFDF00")
+        .setTitle("**New Member**")
+        .setDescription(`:warning:||**Welcome** ${member} to the **VoltPvP Network**.`)
+        .setImage("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")
+        .setTimestamp()});
+})
+
+bot.on('guildMemberAdd', (member) => {
+    const welcomechannel = member.guild.channels.find('name', `entrance`);
+    welcomechannel.send({embed: new Discord.RichEmbed()
+        .setColor("#FFDF00")
+        .setTitle("**New Member**")
+        .setDescription(`:warning:||${member} has left the **VoltPvP Network**.`)
+        .setImage("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")
+        .setTimestamp()});
+})
+//WELCOME/lEAVE MESSAGE
+
 //REGISTRIES
 bot.registry.registerGroup('voltpvp', 'voltpvp')
 bot.registry.registerCommandsIn(__dirname + "/commands");
