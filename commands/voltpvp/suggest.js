@@ -19,6 +19,10 @@ class suggestCommand extends commando.Command {
 
   async run(message,args)
   {
+    if (!message.channel.name.startsWith(`command`)) 
+    {
+      message.channel.send("You can't use this command outside of the commands channel.");
+    }
         let suggestargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         let suggestmessage = suggestargs.join(" ").slice(8);
         if (!suggestmessage) return message.channel.send({embed: new Discord.RichEmbed()
