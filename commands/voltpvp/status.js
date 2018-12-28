@@ -20,7 +20,7 @@ class statusCommand extends commando.Command {
     {
         if (!message.channel.name.startsWith(`command`)) 
     {
-      message.channel.send("You can't use this command outside of the commands channel.");
+      message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel."));
     }
         //npm install request --save
         var request = require("request");
