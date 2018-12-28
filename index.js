@@ -48,6 +48,7 @@ bot.registry.registerDefaults();
 
 //RANKS INFORMATION
 bot.on('message', (message) => {
+    message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel."));
     if (message.content == "$Vertus")
     message.channel.send({embed: new Discord.RichEmbed()
         .setTitle("**Vertus | Rank**")
@@ -60,6 +61,7 @@ bot.on('message', (message) => {
 })
 
 bot.on('message', (message) =>{
+    message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel."));
     if (message.content == "$Nova")
     message.channel.send({embed: new Discord.RichEmbed()
         .setTitle("**Nova | Rank**")
@@ -72,6 +74,7 @@ bot.on('message', (message) =>{
 })
 
 bot.on('message', (message) => {
+    message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel."));
     if (message.content == "$Volt")
     message.channel.send({embed: new Discord.RichEmbed()
         .setTitle("**Volt | Rank**")
