@@ -20,7 +20,7 @@ class infoCommand extends commando.Command {
     {
       if (!message.channel.name.startsWith(`command`)) 
     {
-      message.channel.send("You can't use this command outside of the commands channel.");
+      message.channel.send("You can't use this command outside of the commands channel.").then(message.channel.bulkDelete(2));
     }
         message.channel.send({embed: new Discord.RichEmbed()
             .setTitle("**VoltPvP [] Information**")
