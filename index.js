@@ -29,7 +29,7 @@ bot.on('guildMemberAdd', (member) => {
         .setTimestamp()});
 })
 
-bot.on('guildMemberAdd', (member) => {
+bot.on('guildMemberRemove', (member) => {
     const welcomechannel = member.guild.channels.find('name', `entrance`);
     welcomechannel.send({embed: new Discord.RichEmbed()
         .setColor("#FFDF00")
