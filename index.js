@@ -33,7 +33,7 @@ bot.on('guildMemberRemove', (member) => {
     const welcomechannel = member.guild.channels.find('name', `entrance`);
     welcomechannel.send({embed: new Discord.RichEmbed()
         .setColor("#FFDF00")
-        .setTitle("**New Member**")
+        .setTitle("**Leave Member**")
         .setDescription(`:warning:||${member} has left the **VoltPvP Network**.`)
         .setImage("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")
         .setTimestamp()});
