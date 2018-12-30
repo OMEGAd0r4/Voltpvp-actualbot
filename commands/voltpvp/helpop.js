@@ -20,7 +20,7 @@ class helpopCommand extends commando.Command {
   {
     if (!message.channel.name.startsWith(`command`)) 
     {
-      message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel."));
+      message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel.")).then(bot.message.delete());
     }
     let requestargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         let requestmessage = requestargs.join(" ").slice(7);
