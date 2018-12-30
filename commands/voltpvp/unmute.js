@@ -20,7 +20,7 @@ class unmuteCommand extends commando.Command {
     {
       if (!message.channel.name.startsWith(`command`)) 
     {
-      message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel."));
+      message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel.")).then(message.delete());
     }
         var unmuteargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var unmuteuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(unmuteargs[0]));
