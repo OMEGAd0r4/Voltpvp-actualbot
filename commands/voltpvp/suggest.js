@@ -21,7 +21,7 @@ class suggestCommand extends commando.Command {
   {
     if (!message.channel.name.startsWith(`command`)) 
     {
-      message.channel.send("You can't use this command outside of the commands channel.");
+      message.channel.bulkDelete(1).then(message.channel.send("You can't use this command outside of the commands channel.")).then(message.delete());
     }
         let suggestargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         let suggestmessage = suggestargs.join(" ").slice(8);
