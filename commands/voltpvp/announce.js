@@ -103,7 +103,7 @@ class announceCommand extends commando.Command {
     }
     
 
-    announcementschannel.send(announcementmessageembed);
+    announcementschannel.send(announcementmessage);
     announcementschannel.send("@everyone @here")
   }
 }
