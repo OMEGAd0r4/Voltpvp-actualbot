@@ -24,7 +24,7 @@ class statusCommand extends commando.Command {
     }
         //npm install request --save
         var request = require("request");
-        var mcIP = "voltpvp.mymc.io";
+        var mcIP = "voltpvp.club";
         var mcPort = "";
 
         var url = "http://mcapi.us/server/status?ip=" + mcIP + "&port" + mcPort;
