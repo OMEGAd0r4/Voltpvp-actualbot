@@ -23,7 +23,7 @@ class announceCommand extends commando.Command {
 
     let announcementschannel = message.guild.channels.find(`name`, "twitter");
     if(!announcementschannel) return message.channel.send("Couldn't find the twitter channel");
-    var supportteamrole = message.guild.roles.find(`name`, "SUPPORT TEAM");
+    var supportteamrole = message.guild.roles.find(`name`, "Ticket Support");
     if (!message.member.roles.has(supportteamrole.id)) return message.channel.send("Insufficient permission. You do not have permission to announce messages")
 
     var announcementmessageembed = new Discord.RichEmbed()
