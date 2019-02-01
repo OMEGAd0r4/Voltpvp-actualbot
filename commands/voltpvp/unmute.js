@@ -25,7 +25,7 @@ class unmuteCommand extends commando.Command {
         var unmuteargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var unmuteuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(unmuteargs[0]));
         var unmuterole = message.guild.roles.find(`name`, "Muted");
-        var supportteamerole = message.guild.roles.find(`name`, "SUPPORT TEAM");
+        var supportteamerole = message.guild.roles.find(`name`, "Ticket Support");
 
         if (!unmuterole) return message.channel.send("Please make a 'Muted' role to proceed")
 
