@@ -26,7 +26,7 @@ class muteCommand extends commando.Command {
         var tempmuteuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(tempmuteargs[0]));
         var tempmutereason = tempmuteargs.join(" ").slice(26);
         var tempmuterole = message.guild.roles.find(`name`, "Muted");
-        var supportteamerole = message.guild.roles.find(`name`, "SUPPORT TEAM");
+        var supportteamerole = message.guild.roles.find(`name`, "Ticket Support");
 
         if (!tempmuterole) return message.channel.send("Where cannot find a role called 'Muted'.")
 
