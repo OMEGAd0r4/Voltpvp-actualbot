@@ -5,7 +5,7 @@ const bot = new commando.Client({
   commandPrefix: prefix
 });
 
-class announceCommand extends commando.Command {
+class announce1Command extends commando.Command {
   constructor(client) 
   {
     super(client, {
@@ -27,83 +27,13 @@ class announceCommand extends commando.Command {
     if (!message.member.roles.has(supportteamrole.id)) return message.channel.send("Insufficient permission. You do not have permission to announce messages")
 
     var announcementmessageembed = new Discord.RichEmbed()
-    .setTitle("**VoltPvP | Announcement**")
+    .setTitle("**__Announcement__**")
     .setColor("#FFDF00")
     .addField("**__Announcement__**", `${announcementmessage}`)
-    .setImage("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")
+    .setImage("https://cdn.discordapp.com/attachments/525210084402528267/561557675511513096/volt_logo.jpg")
     .setTimestamp()
 
-    if (announcementmessage.includes("@Developer"))
-    {
-      announcementschannel.send("@Developer")
-    }
-    if (announcementmessage.includes("@Discord Developer"))
-    {
-      announcementschannel.send("@Discord Developer")
-    }
-    if (announcementmessage.includes("@Manager"))
-    {
-      announcementschannel.send("@Manager")
-    }
-    if (announcementmessage.includes("@Platform Admin"))
-    {
-      announcementschannel.send("@Platform Admin")
-    }
-    if (announcementmessage.includes("@Admin"))
-    {
-      announcementschannel.send("@Admin")
-    }
-    if (announcementmessage.includes("@Partner"))
-    {
-      announcementschannel.send("@Partner")
-    }
-    if (announcementmessage.includes("@Senior Mod"))
-    {
-      announcementschannel.send("@Senior Mod")
-    }
-    if (announcementmessage.includes("@Mod"))
-    {
-      announcementschannel.send("@Mod")
-    }
-    if (announcementmessage.includes("@SUPPOR TEAM"))
-    {
-      announcementschannel.send("@SUPPOR TEAM")
-    }
-    if (announcementmessage.includes("@Chat Mod"))
-    {
-      announcementschannel.send("@Chat Mod")
-    }
-    if (announcementmessage.includes("@Trial Mod"))
-    {
-      announcementschannel.send("@Trial Mod")
-    }
-    if (announcementmessage.includes("@head Builder"))
-    {
-      announcementschannel.send("@Head Builder")
-    }
-    if (announcementmessage.includes("@Builder"))
-    {
-      announcementschannel.send("@Builder")
-    }
-    if (announcementmessage.includes("@Discord Bots"))
-    {
-      announcementschannel.send("@Discord Bots")
-    }
-    if (announcementmessage.includes("@Famous"))
-    {
-      announcementschannel.send("@Famous")
-    }
-    if (announcementmessage.includes("@youtuber"))
-    {
-      announcementschannel.send("@Youtuber")
-    }
-    if (announcementmessage.includes("@Volt"))
-    {
-      announcementschannel.send("@Volt")
-    }
-    
-
-    announcementschannel.send(`${announcementmessage}`);
+    announcementschannel.send(announcementmessageembed);
   }
 }
 
