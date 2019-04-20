@@ -32,6 +32,8 @@ class announceCommand extends commando.Command {
     .setTimestamp()
 
     announcementschannel.send(announcementmessageembed);
+    
+    announcementschannel.send("@everyone").then(message.delete(500));
   }
 }
 
