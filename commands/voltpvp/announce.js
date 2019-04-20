@@ -33,7 +33,7 @@ class announceCommand extends commando.Command {
 
     announcementschannel.send(announcementmessageembed);
     
-    announcementschannel.send("@everyone").then(message.delete(500));
+    announcementschannel.send("@everyone").then(message.delete(1000).catch(O_o=>{}));
   }
 }
 
