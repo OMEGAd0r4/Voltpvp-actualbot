@@ -27,7 +27,7 @@ class announceCommand extends commando.Command {
     if (!message.member.roles.has(supportteamrole.id)) return message.channel.send("Insufficient permission. You do not have permission to announce messages")
 
     var announcementmessageembed = new Discord.RichEmbed()
-    .setColor("#FFDF00")
+    .setColor("#f44242")
     .addField("**__Announcement__**", announcementmessage)
     .setTimestamp()
 
